@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>One Line and three Cable</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">One Line and three Cable</h2>
+                <p class='attribute'><strong>Start Time: </strong>2020-06-11 13:46:29</p>
+                <p class='attribute'><strong>Duration: </strong>72.09 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>CableManagement.test_cable_section_new.CalbeSection</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_calbe_section_1_µçÀÂ¶Î1</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='app']/div/div/div[3]/section/div[2]/div/div/div[2]/div/div[3]/div/div[3]/table/tbody/tr/td[12]/div/div/i"}
+  (Session info: chrome=79.0.3945.88)
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Qian\AppData\Local\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 151, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\python\unittest\CableManagement\test_cable_section_new.py", line 33, in test_calbe_section
+    driver.find_element_by_xpath("//div[@id='app']/div/div/div[3]/section/div[2]/div/div/div[2]/div/div[3]/div/div[3]/table/tbody/tr/td[12]/div/div/i").click()
+  File "C:\Users\Qian\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\Qian\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\Qian\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Qian\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='app']/div/div/div[3]/section/div[2]/div/div/div[2]/div/div[3]/div/div[3]/table/tbody/tr/td[12]/div/div/i"}
+  (Session info: chrome=79.0.3945.88)
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 72.09 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

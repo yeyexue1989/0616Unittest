@@ -45,6 +45,7 @@ class EmergencyManageExamine(unittest.TestCase):
         driver.find_element_by_xpath("//textarea").clear()
         driver.find_element_by_xpath("//textarea").send_keys(name+'审核')
         driver.find_element_by_xpath("(//button[@type='button'])[15]").click()
+        time.sleep(2)
 
     # def is_element_present(self, how, what):
     #     try: self.driver.find_element(by=how, value=what)

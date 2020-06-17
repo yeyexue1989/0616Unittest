@@ -34,14 +34,15 @@ class EmergencyManageExmine(unittest.TestCase):
         time.sleep(1)
         driver.find_element_by_xpath("//div[@id='newMenuBox']/div/div[2]/ul/li[12]/ul/li").click()
         time.sleep(1)
-        #勾选记录
+        name = driver.find_element_by_xpath('//table/tbody/tr[1]/td[3]/div').text
         driver.find_element_by_xpath("//div[@id='app']/div/div/div[3]/section/div[2]/div/div/div/div/div/div/div/div/div[2]/div[2]/div/div[3]/table/tbody/tr/td/div/label/span/span").click()
+
         #点击编辑
         driver.find_element_by_xpath("(//button[@type='button'])[4]").click()
         #编辑预案名称
         driver.find_element_by_xpath("(//input[@type='text'])[7]").click()
-        driver.find_element_by_xpath("(//input[@type='text'])[7]").clear()
-        driver.find_element_by_xpath("(//input[@type='text'])[7]").send_keys(u"测试新增预案1733编辑")
+        # driver.find_element_by_xpath("(//input[@type='text'])[7]").clear()
+        driver.find_element_by_xpath("(//input[@type='text'])[7]").send_keys(name+'编辑')
         time.sleep(1)
         driver.find_element_by_xpath("(//input[@type='text'])[8]").click()
         time.sleep(1)

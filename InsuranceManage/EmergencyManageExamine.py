@@ -36,6 +36,7 @@ class EmergencyManageExamine(unittest.TestCase):
         driver.find_element_by_xpath("//div[@id='newMenuBox']/div/div[2]/ul/li[12]/div").click()
         time.sleep(1)
         driver.find_element_by_xpath("//div[@id='newMenuBox']/div/div[2]/ul/li[12]/ul/li").click()
+        time.sleep(2)
         name = driver.find_element_by_xpath('//table/tbody/tr[1]/td[3]/div').text
         #勾选记录
         driver.find_element_by_xpath("//table/tbody/tr/td/div/label/span/span").click()

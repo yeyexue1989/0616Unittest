@@ -63,6 +63,7 @@ class EmergencyManageEdit(unittest.TestCase):
         time.sleep(1)
         driver.find_element_by_xpath("//div[8]/div/div/ul/li[4]/span").click()
         driver.find_element_by_xpath("(//button[@type='button'])[15]").click()
+        time.sleep(2)
         print("应急预案编辑成功！！！")
 
     def is_element_present(self, how, what):

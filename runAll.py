@@ -1,7 +1,7 @@
 import unittest
 import HtmlTestRunner
 from InsuranceManage.EmergencyManageNew import EmergencyManageNew
-from InsuranceManage.EmergencyManageExamine import EmergencyManageExmine
+from InsuranceManage.EmergencyManageEdit import EmergencyManageExmine
 
 if __name__ == '__main__':
 

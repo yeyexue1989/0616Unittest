@@ -36,7 +36,7 @@ class SparePartsNew(unittest.TestCase):
         driver.find_element_by_xpath("//div[@id='newMenuBox']/div/div[2]/ul/li[12]/div").click()
         time.sleep(1)
         driver.find_element_by_xpath("//div[@id='newMenuBox']/div/div[2]/ul/li[12]/ul/li[2]").click()
-        time.sleep(1)
+        time.sleep(2)
         #新增备品备件
         driver.find_element_by_xpath("//div[@id='app']/div/div/div[3]/section/div[2]/div/div/div/div/div/div/div/div/div[2]/div/button/span").click()
         driver.find_element_by_xpath("(//input[@type='text'])[4]").click()

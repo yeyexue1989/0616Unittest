@@ -72,20 +72,20 @@ class EmergencyManageEdit(unittest.TestCase):
         return True
 
     def is_alert_present(self):
-        try: self.driver.switch_to_alert()
+        try: self.driver.switch_to.alert()
         except NoAlertPresentException as e: return False
         return True
 
     def close_alert_and_get_its_text(self):
         try:
-            alert = self.driver.switch_to_alert()
+            alert = self.driver.switch_to.alert()
             alert_text = alert.text
             if self.accept_next_alert:
                 alert.accept()
             else:
                 alert.dismiss()
             return alert_text
-        finally: self.accept_next_alert = True
+        finally: self.accept_next.alert = True
 
     def tearDown(self):
         self.driver.quit()
